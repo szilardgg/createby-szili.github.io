@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Leszel a Valentinom? ❤️</title>
+    <meta name="description" content="Egy kedves, játékos Valentin-napi meghívó." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-words" aria-hidden="true"></div>
+
+    <!-- Intro overlay with sequential love messages -->
+    <section id="introOverlay" class="intro" aria-live="polite" aria-modal="true" role="dialog">
+      <div class="intro-inner">
+        <div class="intro-text" id="introText" aria-label="Üzenet"></div>
+        <div class="intro-actions" id="introActions">
+          <button id="holdNext" class="hold-next" aria-label="Tovább tartva">Tartsd nyomva</button>
+          <div class="hold-bar" aria-hidden="true"><div class="hold-fill" id="holdFill"></div></div>
+          <div class="hold-hint" id="holdHint">Tartsd nyomva a gombot pár másodpercig a továbblépéshez</div>
+        </div>
+      </div>
+    </section>
+
+    <main class="card" role="dialog" aria-labelledby="title" aria-describedby="prompt">
+      <h1 id="title" class="title">Leszel a Valentinom?</h1>
+      <p id="prompt" class="prompt">Ugye igent mondasz? 🥺</p>
+
+      <div class="buttons" id="buttons">
+        <button id="yesBtn" class="btn btn-yes" aria-label="Igen">Igen 💘</button>
+        <button id="noBtn" class="btn btn-no" aria-label="Nem">Nem 😅</button>
+      </div>
+     
+    
+    </main>
+
+    <div id="confetti" class="confetti" aria-hidden="true"></div>
+
+    <!-- Celebration overlay -->
+    <section id="overlay" class="overlay" aria-live="polite" aria-hidden="true">
+      <div id="floatPics" class="float-pics" aria-hidden="true"></div>
+      <div class="overlay-inner">
+        <h2 class="big-title">Szeretlek! ❤️</h2>
+      </div>
+    </section>
+
+    <!-- Background music: YouTube IFrame API -->
+    <div id="yt-player" style="position:fixed; left:-9999px; width:1px; height:1px; opacity:0; pointer-events:none;" aria-hidden="true"></div>
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
